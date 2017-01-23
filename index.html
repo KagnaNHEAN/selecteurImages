@@ -17,7 +17,8 @@
     <button id='up'>reprendre</button>
 
      <main>
-       <h2>Sélectionnez des images de votre choix puis validez.</h2>
+       <h2>Sélectionnez les images de votre choix et n'oubliez pas de remplir le formulaire ci-dessous.</h2>
+
        <ul class='photoList'>
          <li><img src='images/image1.jpg'></li>
          <li><img src='images/image2.jpg'></li>
@@ -44,7 +45,15 @@
      </main>
 
    <p>Vous avez sélectionné <em id="total">0</em> image<span id='S'></span></p>
-   <button id='valider' type="submit">Validez</button>
+
+   <form method='get' action='index.html'>
+     <label for='prenom'>Entrez votre prénom : </label>
+     <input type='text' name='prenom' id='prenom' value='' required='required' maxlength='15'>
+     <span id='prenomManquant'></span><br>
+
+     <input type="submit" value='Validez' id='valider'></button>
+   </form>
+
    <script src="js/main.js"></script>
    </body>
 </html>

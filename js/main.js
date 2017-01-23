@@ -40,7 +40,7 @@ function unpause(){
 }
 //Reste à régler le 2ème click sur pause qui ne marche pas
 
-/*******************************Sélecteur****************************************/
+/*******************************Sélecteur**************************************/
 var photos = document.querySelectorAll('.photoList li');
 var total = document.getElementById('total');
 var s = document.getElementById('S');
@@ -62,9 +62,27 @@ for(var index=0; index < photos.length; index++){
   photos[index].addEventListener('click', onClickListItems);
 }
 
-/**********************************bouton validez******************************/
-var valide = document.getElementById('valider');
-valide.addEventListener('click', bravo);
-function bravo(){
-  alert('Bravo, merci pour le test !!!!');
+/*********************************Formulaire***********************************/
+var prenom = document.getElementById('prenom');
+var prenomM = document.getElementById('prenomManquant');
+var prenomV =/^[a-zA-ZéäèîïÉÄÈÎÏ][a-zéèîïêàäç]+([-'\s][a-zA-ZéäèîïÉÄÈÎÏ][a-zéèîïêàäç]+)?/;
+
+var validation = document.getElementById('valider');
+
+//Ajout du click au bouton valider et vérification des données entrées par l'utilisateur
+
+
+validation.addEventListener('click', fValid);
+function fValid(e) {
+  if(prenom.validity.valueMissing) {
+      e.preventDefault();
+      prenomM.textContent = 'Prénom manquant';
+      prenomM.style.color = 'red';
+  } else if(prenomV.test(prenom.value) == false) {
+      e.preventDefault();
+      prenomM.textContent = 'Format incorrecte';
+      prenomM.style.color = 'red';
+  } else {
+      alert('Bravo, merci pour le test !!!!');
+      }
 }
