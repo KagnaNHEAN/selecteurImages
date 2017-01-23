@@ -6,8 +6,8 @@ body {
 h1{
 text-align: center;
 }
-em {
-  color: red;
+#total {
+  color: #9999ff;
   font-weight: bold;
 }
 
@@ -33,5 +33,5 @@ em {
 }
 
 .photoList li.selected {
-    background-color:  #9999ff;
+    background-color: #9999ff;
 }

@@ -61,3 +61,10 @@ function onClickListItems(){
 for(var index=0; index < photos.length; index++){
   photos[index].addEventListener('click', onClickListItems);
 }
+
+/**********************************bouton validez******************************/
+var valide = document.getElementById('valider');
+valide.addEventListener('click', bravo);
+function bravo(){
+  alert('Bravo, merci pour le test !!!!');
+}
