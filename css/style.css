@@ -1,0 +1,37 @@
+
+body {
+  margin: 0 auto;
+  width: 90%
+}
+h1{
+text-align: center;
+}
+em {
+  color: red;
+  font-weight: bold;
+}
+
+.photoList
+{
+    padding-left: 0;
+    width: 950px;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ .photoList li {
+  margin: 1em;
+  padding: 0.5em;
+
+  border-radius: 8px;
+  transition: background-color 0.5s;
+}
+
+.photoList li:hover {
+    background-color: #ff8080;
+}
+
+.photoList li.selected {
+    background-color:  #9999ff;
+}
